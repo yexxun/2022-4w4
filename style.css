@@ -7,6 +7,7 @@ VARIABLES
 --------------------------------------------------------- */
 /* ---------------- BACKGROUND */
 /* ---------------- LIENS */
+/* ---------------- LIENS FOOTER */
 /* ---------------- FONT */
 /* ------------------------------------- points de rupture des media queries */
 /* ---------------------------------------------------------
@@ -356,6 +357,26 @@ a:hover, a:active {
   outline: 0;
 }
 
+.site__footer a {
+  color: #f40b0b;
+}
+
+.site__footer a:visited {
+  color: #1435eb;
+}
+
+.site__footer a:hover, .site__footer a:focus, .site__footer a:active {
+  color: #19e123;
+}
+
+.site__footer a:focus {
+  outline: thin dotted;
+}
+
+.site__footer a:hover, .site__footer a:active {
+  outline: 0;
+}
+
 /* ---------------------------------------------------------
 COMPOSANTES
 --------------------------------------------------------- */
@@ -494,6 +515,26 @@ COMPOSANTES
   padding: 15px;
 }
 
+.site__footer__menu__ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+}
+
+.site__footer__menu__ul .menu-item {
+  margin: 10px 5px;
+}
+
+.site__footer__menu__ul .menu-item a {
+  display: flex;
+  align-items: center;
+  padding: 3px;
+}
+
+.site__footer__menu__ul .menu-item a svg {
+  color: aqua;
+}
+
 .footer__titre,
 .footer__presentation,
 .footer__author {
@@ -535,13 +576,13 @@ theme name: Lab 2 Lemieux Florence
 .site {
   display: grid;
   grid-template-columns: auto;
-  grid-template-areas: "sidebar" "header" "main" "footer";
+  grid-template-areas: "sidebar" "header" "main" "footer";
 }
 
 @media screen and (min-width: 800px) {
   .site {
     grid-template-columns: 300px auto;
-    grid-template-areas: "header header" "sidebar main" "footer footer";
+    grid-template-areas: "header header" "sidebar main" "footer footer";
   }
 }
 /*# sourceMappingURL=style.css.map */

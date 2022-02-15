@@ -1,14 +1,17 @@
-a {
-	color: $color__link;
+@mixin links(	$couleur, 
+				$couleur--visited, 
+				$couleur--hover)
+{
+	color: $couleur;
 
 	&:visited {
-		color: $color__link-visited;
+		color: $couleur--visited;
 	}
 
 	&:hover,
 	&:focus,
 	&:active {
-		color: $color__link-hover;
+		color: $couleur--hover;
 	}
 
 	&:focus {
@@ -20,3 +23,17 @@ a {
 		outline: 0;
 	}
 }
+
+
+a {
+	@include links(	$color__link,
+					$color__link-visited, 
+					$color__link-hover )
+}
+
+ .site__footer a{
+	@include links(	$color__link__footer,
+					$color__link__footer-visited, 
+					$color__link__footer-hover );
+}
+
