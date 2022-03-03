@@ -8,7 +8,9 @@
       &__ul{ // .site__footer__menu__ul
           display : flex;
           list-style-type: none;
-          justify-content: center;
+          justify-content: left;
+          flex-direction: column;
+          width: 10%;
           
           .menu-item{ // .site__footer__menu__ul .menu-item
               margin : 10px 5px;
