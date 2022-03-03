@@ -747,9 +747,13 @@ ANIMAION
 
 @keyframes anim-entete {
   0% {
-    transform: translateY(-100vh);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
   }
   100% {
+    opacity: 1;
     transform: translateY(0);
   }
 }
