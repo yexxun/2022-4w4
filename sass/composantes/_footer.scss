@@ -9,17 +9,26 @@
           display : flex;
           list-style-type: none;
           justify-content: center;
+          
           .menu-item{ // .site__footer__menu__ul .menu-item
               margin : 10px 5px;
             a{ // .site__footer__menu__ul .menu-item a
               display : flex;
               align-items: center;
               padding : 3px;
+              border-radius: 5px;
+              box-shadow: 0 8px 16px 0 rgba(255, 143, 195, 0.431), 0 6px 20px 0 rgba(0,0,0,0.19);
               svg { // .site__footer__menu__ul .menu-item a svg
-                color: aqua;
+                color: $color__link__footer;
+              }
+            
+            &:hover{
+              svg { // .site__footer__menu__ul .menu-item a svg
+                color: $color__link__footer-hover;
               }
             }
           }
+        }
       }
     }
   }

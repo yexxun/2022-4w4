@@ -16,6 +16,9 @@ VARIABLES
 /* ---------------- BACKGROUND */
 /* ---------------- LIENS */
 /* ---------------- LIENS FOOTER */
+/* ---------------- LIENS HEADER titre principal du site */
+/* -------------------------couleur menu footer */
+/* ------------------------couleur menu principal */
 /* ---------------- FONT */
 /* ------------------------------------- points de rupture des media queries */
 /* ---------------------------------------------------------
@@ -345,12 +348,14 @@ html {
 /* ---------------------------------------------------------
 ÉLÉMENTS
 --------------------------------------------------------- */
+/* -------------------------------------------------*/
+/* -------------------------------------------------*/
 a {
-  color: #7b5647;
+  color: #ff9e9e;
 }
 
 a:visited {
-  color: #5c4033;
+  color: white;
 }
 
 a:hover, a:focus, a:active {
@@ -366,15 +371,15 @@ a:hover, a:active {
 }
 
 .site__footer a {
-  color: #f40b0b;
+  color: #7b5647;
 }
 
 .site__footer a:visited {
-  color: #1435eb;
+  color: white;
 }
 
 .site__footer a:hover, .site__footer a:focus, .site__footer a:active {
-  color: #19e123;
+  color: #ff8585;
 }
 
 .site__footer a:focus {
@@ -385,13 +390,79 @@ a:hover, a:active {
   outline: 0;
 }
 
+.header__titre a {
+  color: #fa9292;
+}
+
+.header__titre a:visited {
+  color: #ffcabc;
+}
+
+.header__titre a:hover, .header__titre a:focus, .header__titre a:active {
+  color: #ff8585;
+}
+
+.header__titre a:focus {
+  outline: thin dotted;
+}
+
+.header__titre a:hover, .header__titre a:active {
+  outline: 0;
+}
+
+.site__footer .menu-item a {
+  color: #fff;
+  background-color: #444;
+}
+
+.site__footer .menu-item a:visited {
+  color: #ddd;
+  background-color: #555;
+}
+
+.site__footer .menu-item a:hover, .site__footer .menu-item a:focus, .site__footer .menu-item a:active {
+  color: #f00;
+  background-color: #222;
+}
+
+.site__footer .menu-item a:focus {
+  outline: thin dotted;
+}
+
+.site__footer .menu-item a:hover, .site__footer .menu-item a:active {
+  outline: 0;
+}
+
+.menu-principal .menu-item a {
+  color: #0f0;
+  background-color: #ddd;
+}
+
+.menu-principal .menu-item a:visited {
+  color: #0d0;
+  background-color: #ccc;
+}
+
+.menu-principal .menu-item a:hover, .menu-principal .menu-item a:focus, .menu-principal .menu-item a:active {
+  color: #00f;
+  background-color: #ddd;
+}
+
+.menu-principal .menu-item a:focus {
+  outline: thin dotted;
+}
+
+.menu-principal .menu-item a:hover, .menu-principal .menu-item a:active {
+  outline: 0;
+}
+
 /* ---------------------------------------------------------
 COMPOSANTES
 --------------------------------------------------------- */
-.principal {
+.site__main {
   margin: 20px;
   padding: 10px 15px;
-  background-color: #eca7a7;
+  background-color: #8a8a8a;
   border-radius: 5px;
   box-shadow: #39443e 1px -1px 10px;
 }
@@ -403,7 +474,7 @@ COMPOSANTES
 
 .formation__titre {
   font-size: 2rem;
-  color: #443936;
+  color: #ff7b77;
   margin: 10px 0px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
@@ -414,7 +485,7 @@ COMPOSANTES
 }
 
 .formation__cours {
-  background-color: #ffd6d1;
+  background-color: #817e7e;
   box-shadow: #394044 1px -1px 10px;
   border-radius: 5px;
   margin: 10px;
@@ -438,7 +509,7 @@ COMPOSANTES
 
 .cours__titre {
   font-size: 1.5rem;
-  color: #443936;
+  color: #ff7b77;
   margin: 5px 0px;
 }
 
@@ -453,25 +524,89 @@ COMPOSANTES
 }
 
 .site__header {
-  background-color: #594036;
-  color: #fa9292;
+  background-color: #1c1c1c;
+  color: #ff5c5c;
   padding-left: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-.site__header .header__titre {
-  font-size: 3em;
+@media screen and (min-width: 800px) {
+  .site__header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.site__header__titre {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.site__header__titre h1 {
+  font-size: clamp(2rem, 3vw, 7rem);
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
-.site__header .header__desc {
-  font-size: 1.5rem;
+.site__header__titre h2 {
+  font-size: clamp(1rem, 2vw, 4rem);
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: 0 0 0 2rem;
+}
+
+.site__header__util {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+}
+
+@media screen and (min-width: 800px) {
+  .site__header__util {
+    width: 23%;
+  }
+}
+
+.recherche {
+  width: 100%;
+  position: relative;
+}
+
+.recherche__input {
+  width: 100%;
+  height: 25px;
+  outline: 0;
+  border-radius: 5px;
+  border: none;
+  background: #ffd1d1;
+  padding: 0 0 0 40px;
+  margin: 0;
+}
+
+.recherche__bouton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25px;
+  height: 24px;
+  border: none;
+  outline: none;
+  border-radius: 0 5px 5px 0;
+  padding: 0;
+  margin: 0;
 }
 
 #burger {
   position: absolute;
   transition: transform .3s;
   transform: rotate(0);
+}
+
+#chk-burger {
+  display: none;
 }
 
 #chk-burger:checked ~ #burger {
@@ -501,7 +636,7 @@ COMPOSANTES
   display: block;
   text-decoration: none;
   padding: 4px;
-  background-color: #ffa3a3;
+  background-color: #262626;
 }
 
 .menu-item a:hover {
@@ -519,7 +654,7 @@ COMPOSANTES
 
 .site__footer {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  background-color: #2f2a28;
+  background-color: #1c1c1c;
   padding: 15px;
 }
 
@@ -537,17 +672,84 @@ COMPOSANTES
   display: flex;
   align-items: center;
   padding: 3px;
+  border-radius: 5px;
+  box-shadow: 0 8px 16px 0 rgba(255, 143, 195, 0.431), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .site__footer__menu__ul .menu-item a svg {
-  color: aqua;
+  color: #7b5647;
+}
+
+.site__footer__menu__ul .menu-item a:hover svg {
+  color: #ff8585;
 }
 
 .footer__titre,
 .footer__presentation,
 .footer__author {
-  color: #ffcabc;
+  color: white;
   text-align: center;
+}
+
+.cours__contenu {
+  display: flex;
+}
+
+.recherche {
+  position: relative;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.recherche__input {
+  flex: 1;
+  width: 100%;
+  background-color: rgba(255, 199, 229, 0.5);
+  border: none;
+  outline: none;
+}
+
+.recherche__input:focus {
+  background-color: rgba(255, 199, 229, 0.8);
+}
+
+.recherche__bouton {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------------------------------------------------------
+ANIMAION
+--------------------------------------------------------- */
+.animation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.animation__bloc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: palevioletred;
+  color: #fff;
+  font-size: 3rem;
+  animation: anim-entete 1s forwards;
+}
+
+@keyframes anim-entete {
+  0% {
+    transform: translateY(-100vh);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 /* ---------------------------------------------------------
@@ -557,32 +759,33 @@ LAYOUT
 theme name: Lab 2 Lemieux Florence
 */
 .site {
-  background-color: #957365;
+  background-color: #363636;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .site__header {
   grid-area: header;
-  background-color: #594036;
+  background-color: #1c1c1c;
 }
 
 .site__barre {
   grid-area: sidebar;
-  background-color: #ff8585;
+  background-color: #3b3b3b;
 }
 
 .site__main {
   grid-area: main;
-  background-color: #eca7a7;
+  background-color: #8a8a8a;
 }
 
 .site__footer {
   grid-area: footer;
-  background-color: #2f2a28;
+  background-color: #1c1c1c;
 }
 
 .site {
   display: grid;
+  gap: 10px;
   grid-template-columns: auto;
   grid-template-areas: "sidebar" "header" "main" "footer";
 }
