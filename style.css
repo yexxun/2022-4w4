@@ -655,22 +655,42 @@ COMPOSANTES
 .site__footer {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   background-color: #1c1c1c;
+  color: white;
   padding: 15px;
 }
 
-.site__footer__menu__ul {
+.site__footer__colonne {
   display: flex;
-  list-style-type: none;
-  justify-content: left;
-  flex-direction: column;
-  width: 10%;
+  justify-content: space-between;
 }
 
-.site__footer__menu__ul .menu-item {
+.site__footer__colonne section {
+  flex: 0 0 30%;
+  border: 1px solid #aaa;
+}
+
+.site__footer__ligne {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.site__footer__ligne section p {
+  text-align: center;
+}
+
+.footer__menu__nav__ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.footer__menu__nav__ul .menu-item {
   margin: 10px 5px;
 }
 
-.site__footer__menu__ul .menu-item a {
+.footer__menu__nav__ul .menu-item a {
   display: flex;
   align-items: center;
   padding: 3px;
@@ -678,11 +698,11 @@ COMPOSANTES
   box-shadow: 0 8px 16px 0 rgba(255, 143, 195, 0.431), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.site__footer__menu__ul .menu-item a svg {
+.footer__menu__nav__ul .menu-item a svg {
   color: #7b5647;
 }
 
-.site__footer__menu__ul .menu-item a:hover svg {
+.footer__menu__nav__ul .menu-item a:hover svg {
   color: #ff8585;
 }
 
@@ -739,7 +759,7 @@ ANIMAION
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background-color: palevioletred;
+  background-color: #b9b9b9;
   color: #fff;
   font-size: 3rem;
   animation: anim-entete 1s forwards;

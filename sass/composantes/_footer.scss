@@ -1,39 +1,80 @@
 .site__footer {
     font-family: $font__titre;
     background-color: $color__background-footer;
+    color: $color__font-footer;
     padding: 15px;
 
-    &__menu{ // .site__footer__menu
+    &__colonne{ // .site__footer__colonne
+        display: flex;
+        justify-content: space-between;
+        section{ // .site__footer__colonne  section
+          flex: 0 0 30%; // 3 colonnes
+          border: 1px solid #aaa;
+        }
+        .footer__adresse{}// .site__footer__colonne .footer__adresse  
+        .footer__article{}
+        .footer__lien{}
+    }
 
-      &__ul{ // .site__footer__menu__ul
-          display : flex;
-          list-style-type: none;
-          justify-content: left;
-          flex-direction: column;
-          width: 10%;
-          
-          .menu-item{ // .site__footer__menu__ul .menu-item
-              margin : 10px 5px;
-            a{ // .site__footer__menu__ul .menu-item a
-              display : flex;
-              align-items: center;
-              padding : 3px;
-              border-radius: 5px;
-              box-shadow: 0 8px 16px 0 rgba(255, 143, 195, 0.431), 0 6px 20px 0 rgba(0,0,0,0.19);
-              svg { // .site__footer__menu__ul .menu-item a svg
-                color: $color__link__footer;
-              }
+    &__ligne{ // .site__footer__ligne
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      section {
+        p{
+          text-align: center;
+        }
+      }
+      .footer__auteur{}
+      .footer__description{}
+      .footer__recherche{}
+      .footer__copyright{}
+      
+      }
+    }
+ 
+
+    .footer__menu{
+      &__nav{ // .footer__menu__nav
+
+        &__ul{ // .footer__menu__nav__ul
+            display : flex;
+            list-style-type: none;
+            justify-content: center;
+            flex-direction: row;
+            //width: 20%;
             
-            &:hover{
-              svg { // .site__footer__menu__ul .menu-item a svg
-                color: $color__link__footer-hover;
+            .menu-item{ // .site__footer__menu__ul .menu-item
+                margin : 10px 5px;
+              a{ // .site__footer__menu__ul .menu-item a
+                display : flex;
+                align-items: center;
+                padding : 3px;
+                border-radius: 5px;
+                box-shadow: 0 8px 16px 0 rgba(255, 143, 195, 0.431), 0 6px 20px 0 rgba(0,0,0,0.19);
+                svg { // .site__footer__menu__ul .menu-item a svg
+                  color: $color__link__footer;
+                }
+              
+              &:hover{
+                svg { // .site__footer__menu__ul .menu-item a svg
+                  color: $color__link__footer-hover;
+                }
               }
             }
           }
         }
       }
+
+
+
+
+
+
+
+
+    
     }
-  }
 .footer__titre,
 .footer__presentation,
 .footer__author {
