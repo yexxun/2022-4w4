@@ -1,21 +1,24 @@
  <footer class="site__footer">
  <div class="site__footer__colonne">
       <section class="footer__article">
-           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit atque inventore amet quisquam sapiente aperiam harum dolores perferendis repellat ipsa fugit voluptatibus rerum facere hic, quaerat vitae doloremque facilis nam!
+           <?php get_sidebar("footer_colonne_1"); ?>
       </section>
       <section class="footer__lien">
-           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error, nam eos, eveniet nemo sint itaque quam consequatur, laboriosam repudiandae minima optio. Beatae sed eius praesentium deleniti distinctio totam vitae quasi!
+      <?php get_sidebar("footer_colonne_2"); ?>
       </section>
       <section class="footer__adresse">
-           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores numquam esse architecto culpa quos, adipisci deleniti eum a praesentium officiis excepturi ea incidunt eveniet non! Tenetur blanditiis neque ipsum vel.
+      <?php get_sidebar("footer_colonne_3"); ?>
       </section>
  </div>
  <div class="site__footer__ligne"></div>
  <section class="footer__description">
-      <p>4w4-Conception d'interface et développement Web - TIM - Collège de Maisonneuve</p>
+     <?php get_sidebar("footer_ligne_2"); ?>
  </section>
  <section class="footer__copyright">
       <p>&copy; Tous droit réservé - TIM Collège de Maisonneuve</p>
+ </section>
+ <section class="footer__sociaux">
+     <?php get_sidebar("footer_ligne_1"); ?>
  </section>
  <section class="footer__auteur">
       <p>Auteur : yeeun Kim</p>

@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*
-theme name: lab-4 gr3 yeeun Kim
+theme name: TP1 yeeun Kim
 Author : yeeun Kim
 Author URI: https://github.com/yexxun
 Description: Ce thème servira de base de développement pour l'ensemble du cours 4W4. Chacune des étapes de développement se retrouvera sur gitHub à l'adresse: https://github.com/eddytuto/2022-4w4
@@ -542,7 +542,7 @@ COMPOSANTES
 
 .site__header__titre {
   display: flex;
-  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -557,22 +557,46 @@ COMPOSANTES
   margin: 0 0 0 2rem;
 }
 
-.site__header__util {
+.site__header__titre .custom-logo-link, .site__header__titre .header__titre, .site__header__titre .header__description {
+  padding: 10px;
+}
+
+.site__header__titre .header__titre {
+  font-size: clamp(3rem, 4vw, 8rem);
+  justify-content: flex-start;
+}
+
+.site__header__titre .header__description {
+  font-size: clamp(2rem, 2vw, 3rem);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.site__header .util {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  width: 100%;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  padding: 15px;
 }
 
 @media screen and (min-width: 800px) {
-  .site__header__util {
-    width: 23%;
+  .site__header .util {
+    margin-left: auto;
   }
+}
+
+.site__header .util__lien {
+  display: flex;
 }
 
 .recherche {
   width: 100%;
   position: relative;
+  display: flex;
+  width: 100%;
+  margin-left: 10px 0 0 0;
+  height: 2rem;
 }
 
 .recherche__input {
@@ -587,6 +611,7 @@ COMPOSANTES
 }
 
 .recherche__bouton {
+  height: 100%;
   position: absolute;
   top: 0;
   right: 0;
@@ -621,6 +646,10 @@ COMPOSANTES
   display: block;
 }
 
+.menu-principal-container {
+  padding: 30px 0 0 0;
+}
+
 .menu {
   list-style-type: none;
   margin: 0;
@@ -644,11 +673,17 @@ COMPOSANTES
 }
 
 @media screen and (min-width: 800px) {
-  #burger {
+  .site #burger {
     display: none;
   }
-  .menu-principal-container {
+  .site .menu-principal-container {
     display: block;
+  }
+  .home #burger {
+    display: block;
+  }
+  .home .menu-principal-container {
+    display: none;
   }
 }
 
@@ -666,7 +701,6 @@ COMPOSANTES
 
 .site__footer__colonne section {
   flex: 0 0 30%;
-  border: 1px solid #aaa;
 }
 
 .site__footer__ligne {
@@ -759,7 +793,7 @@ ANIMAION
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background-color: #b9b9b9;
+  background-color: #1b1b1b;
   color: #fff;
   font-size: 3rem;
   animation: anim-entete 1s forwards;
@@ -768,13 +802,16 @@ ANIMAION
 @keyframes anim-entete {
   0% {
     opacity: 0;
+    scale: 0;
   }
   50% {
     opacity: 0.5;
+    scale: 50%;
   }
   100% {
     opacity: 1;
     transform: translateY(0);
+    scale: 100%;
   }
 }
 
@@ -785,13 +822,27 @@ LAYOUT
 theme name: Lab 2 Lemieux Florence
 */
 .site {
-  background-color: #363636;
+  background-color: rgba(54, 54, 54, 0.5);
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.home::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #1b1818;
+  z-index: -1;
+  clip-path: polygon(82% 0, 100% 0, 100% 100%, 48% 100%);
 }
 
 .site__header {
   grid-area: header;
-  background-color: #1c1c1c;
+  background-color: rgba(28, 28, 28, 0.5);
 }
 
 .site__barre {
@@ -801,7 +852,7 @@ theme name: Lab 2 Lemieux Florence
 
 .site__main {
   grid-area: main;
-  background-color: #8a8a8a;
+  background-color: rgba(138, 138, 138, 0.5);
 }
 
 .site__footer {
@@ -809,9 +860,10 @@ theme name: Lab 2 Lemieux Florence
   background-color: #1c1c1c;
 }
 
+/* configuration mobile */
 .site {
   display: grid;
-  gap: 10px;
+  gap: 0px;
   grid-template-columns: auto;
   grid-template-areas: "sidebar" "header" "main" "footer";
 }
@@ -820,6 +872,12 @@ theme name: Lab 2 Lemieux Florence
   .site {
     grid-template-columns: 300px auto;
     grid-template-areas: "header header" "sidebar main" "footer footer";
+  }
+  .home {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: auto;
+    grid-template-areas: "sidebar" "header" "main" "footer";
   }
 }
 /*# sourceMappingURL=style.css.map */
