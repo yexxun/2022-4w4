@@ -10,7 +10,7 @@ $categories = get_the_category();
                         $nbHeures = get_field( "nombre_dheures" );
                         $departement = get_field( "departement" );
                         $sigleCours = substr($titre, 0, 7);
-                        $desCours = wp_trim_words(get_the_content(),15,"<a href='#'> La suite </a>");
+                        $desCours = wp_trim_words(get_the_content(),15,"<button class='cours__desc__ouvrir'> La suite </button>");
                         ?>
 
                         <?php the_post_thumbnail("thumbnail"); ?>
