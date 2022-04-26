@@ -5,11 +5,11 @@
     &__input{
         flex: 1;
         width: 100%;
-        background-color: rgba(rgb(255, 199, 229), .5);
+        background-color: rgba(rgb(185, 185, 185), .5);
         border: none;
         outline: none;
         &:focus{
-            background-color: rgba(rgb(255, 199, 229), .8);
+            background-color: rgba(rgb(255, 255, 255), .8);
         }
     }
     &__bouton{

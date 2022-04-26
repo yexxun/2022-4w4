@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*
-theme name: TP1 yeeun Kim
-Author : yeeun Kim
+theme name: EXER-4 yeeun Kim
+Author: yeeun Kim
 Author URI: https://github.com/yexxun
 Description: Ce thème servira de base de développement pour l'ensemble du cours 4W4. Chacune des étapes de développement se retrouvera sur gitHub à l'adresse: https://github.com/eddytuto/2022-4w4
 Version: 1.0.0
@@ -20,6 +20,9 @@ VARIABLES
 /* -------------------------couleur menu footer */
 /* ------------------------couleur menu principal */
 /* ---------------- FONT */
+/* ---------------- couleur bouton menu-categorie cours */
+/* -------------------------couleur titre */
+/* ------------------------- carte d'acceuil */
 /* ------------------------------------- points de rupture des media queries */
 /* ---------------------------------------------------------
 INITIALISATION
@@ -351,7 +354,7 @@ html {
 /* -------------------------------------------------*/
 /* -------------------------------------------------*/
 a {
-  color: #ff9e9e;
+  color: white;
 }
 
 a:visited {
@@ -371,7 +374,7 @@ a:hover, a:active {
 }
 
 .site__footer a {
-  color: #7b5647;
+  color: #545454;
 }
 
 .site__footer a:visited {
@@ -379,7 +382,7 @@ a:hover, a:active {
 }
 
 .site__footer a:hover, .site__footer a:focus, .site__footer a:active {
-  color: #ff8585;
+  color: #949494;
 }
 
 .site__footer a:focus {
@@ -391,15 +394,15 @@ a:hover, a:active {
 }
 
 .header__titre a {
-  color: #fa9292;
+  color: #1b1b1b;
 }
 
 .header__titre a:visited {
-  color: #ffcabc;
+  color: #242424;
 }
 
 .header__titre a:hover, .header__titre a:focus, .header__titre a:active {
-  color: #ff8585;
+  color: #171717;
 }
 
 .header__titre a:focus {
@@ -421,7 +424,7 @@ a:hover, a:active {
 }
 
 .site__footer .menu-item a:hover, .site__footer .menu-item a:focus, .site__footer .menu-item a:active {
-  color: #f00;
+  color: #8a8a8a;
   background-color: #222;
 }
 
@@ -434,17 +437,17 @@ a:hover, a:active {
 }
 
 .menu-principal .menu-item a {
-  color: #0f0;
+  color: #3d3d3d;
   background-color: #ddd;
 }
 
 .menu-principal .menu-item a:visited {
-  color: #0d0;
+  color: #5d5d5d;
   background-color: #ccc;
 }
 
 .menu-principal .menu-item a:hover, .menu-principal .menu-item a:focus, .menu-principal .menu-item a:active {
-  color: #00f;
+  color: #959595;
   background-color: #ddd;
 }
 
@@ -454,6 +457,53 @@ a:hover, a:active {
 
 .menu-principal .menu-item a:hover, .menu-principal .menu-item a:active {
   outline: 0;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 4rem);
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2.8rem;
+}
+
+h4 {
+  font-size: 2.3rem;
+}
+
+h5 {
+  font-size: 2rem;
+}
+
+h6 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+h1, h2 {
+  font-family: "Montserrat", sans-serif;
+  color: #252525;
+}
+
+h3, h4 {
+  font-family: "Poppins", sans-serif;
+  color: #626262;
+}
+
+h5, h6 {
+  font-family: "Roboto", sans-serif;
+  color: #9e9e9e;
+}
+
+p {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
 /* ---------------------------------------------------------
@@ -473,10 +523,7 @@ COMPOSANTES
 }
 
 .formation__titre {
-  font-size: 2rem;
-  color: #ff7b77;
   margin: 10px 0px;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
 .formation__liste {
@@ -485,6 +532,8 @@ COMPOSANTES
 }
 
 .formation__cours {
+  background-repeat: no-repeat;
+  background-position: 97% 3%;
   background-color: #817e7e;
   box-shadow: #394044 1px -1px 10px;
   border-radius: 5px;
@@ -509,7 +558,7 @@ COMPOSANTES
 
 .cours__titre {
   font-size: 1.5rem;
-  color: #ff7b77;
+  color: #222222;
   margin: 5px 0px;
 }
 
@@ -523,9 +572,37 @@ COMPOSANTES
   font-size: 1rem;
 }
 
+.web {
+  background-image: url(https://s2.svgbox.net/octicons.svg?ic=globe);
+}
+
+.web {
+  background-image: url("https://s2.svgbox.net/octicons.svg?ic=globe-bold");
+}
+
+.jeu {
+  background-image: url("https://s2.svgbox.net/materialui.svg?ic=games");
+}
+
+.comm {
+  background-image: url("https://s2.svgbox.net/octicons.svg?ic=users");
+}
+
+.design {
+  background-image: url("https://s2.svgbox.net/materialui.svg?ic=color_lens");
+}
+
+.video {
+  background-image: url("https://s2.svgbox.net/octicons.svg?ic=device-camera-video");
+}
+
+.creation-3d {
+  background-image: url("https://s2.svgbox.net/materialui.svg?ic=view_in_ar");
+}
+
 .site__header {
   background-color: #1c1c1c;
-  color: #ff5c5c;
+  color: #141414;
   padding-left: 10px;
   display: flex;
   align-items: center;
@@ -583,6 +660,7 @@ COMPOSANTES
 @media screen and (min-width: 800px) {
   .site__header .util {
     margin-left: auto;
+    width: 350px;
   }
 }
 
@@ -605,7 +683,7 @@ COMPOSANTES
   outline: 0;
   border-radius: 5px;
   border: none;
-  background: #ffd1d1;
+  background: #212121;
   padding: 0 0 0 40px;
   margin: 0;
 }
@@ -669,7 +747,7 @@ COMPOSANTES
 }
 
 .menu-item a:hover {
-  background-color: #ffd1d1;
+  background-color: #7d7d7d;
 }
 
 @media screen and (min-width: 800px) {
@@ -685,6 +763,139 @@ COMPOSANTES
   .home .menu-principal-container {
     display: none;
   }
+}
+
+.accueil__cours {
+  color: azure;
+}
+
+.accueil__aide {
+  color: azure;
+}
+
+.accueil__etudiant {
+  color: azure;
+}
+
+.accueil__prof {
+  color: azure;
+}
+
+.menu-accueil-container .menu, .menu-evenement-container .menu {
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu-accueil-container .menu .accueil__cours .menu-item-icone, .menu-evenement-container .menu .accueil__cours .menu-item-icone {
+  background-image: url("https://s2.svgbox.net/octicons.svg?ic=repo-forked-bold");
+}
+
+.menu-accueil-container .menu .accueil__prof .menu-item-icone, .menu-evenement-container .menu .accueil__prof .menu-item-icone {
+  background-image: url("https://s2.svgbox.net/octicons.svg?ic=person-bold");
+}
+
+.menu-accueil-container .menu .accueil__aide .menu-item-icone, .menu-evenement-container .menu .accueil__aide .menu-item-icone {
+  background-image: url("https://s2.svgbox.net/octicons.svg?ic=repo-bold");
+}
+
+.menu-accueil-container .menu .accueil__etudiant .menu-item-icone, .menu-evenement-container .menu .accueil__etudiant .menu-item-icone {
+  background-image: url("https://s2.svgbox.net/octicons.svg?ic=rocket-bold");
+}
+
+.menu-accueil-container .menu .menu-item, .menu-evenement-container .menu .menu-item {
+  width: 20%;
+  padding: 10px;
+  height: 250px;
+}
+
+.menu-accueil-container .menu .menu-item a, .menu-evenement-container .menu .menu-item a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+  height: 100%;
+}
+
+.menu-accueil-container .menu .menu-item a hr, .menu-evenement-container .menu .menu-item a hr {
+  width: 90%;
+}
+
+.menu-accueil-container .menu .menu-item a .menu-item-description, .menu-evenement-container .menu .menu-item a .menu-item-description {
+  font-size: 1rem;
+}
+
+.menu-accueil-container .menu .menu-item a .menu-item-icone, .menu-evenement-container .menu .menu-item a .menu-item-icone {
+  border: 1px solid #aaa;
+  width: 3rem;
+  height: 3rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin-top: auto;
+}
+
+.menu-accueil-container .menu-item {
+  background-color: #2f2f2f;
+}
+
+.menu-accueil-container .menu-item a {
+  color: #474747;
+}
+
+.menu-accueil-container .menu-item:hover {
+  background-color: #acacac;
+}
+
+.menu-accueil-container .menu-item:hover a {
+  color: #c2c2c2;
+}
+
+.menu-evenement-container .menu-item {
+  background-color: #0c0c50;
+}
+
+.menu-evenement-container .menu-item a {
+  background-color: #3e3e66;
+}
+
+.menu-evenement-container .menu-item:hover {
+  background-color: #3e3e75;
+}
+
+.menu-evenement-container .menu-item:hover a {
+  background-color: #27275f;
+}
+
+.menu-categorie_cours_container .menu {
+  display: flex;
+  list-style-type: none;
+}
+
+.menu-categorie_cours_container .menu .menu-item {
+  margin: 0 15px;
+  background-color: #2f2f2f;
+}
+
+.menu-categorie_cours_container .menu .menu-item a {
+  padding: 5px;
+  color: #474747;
+}
+
+.menu-categorie_cours_container .menu .menu-item:hover {
+  background-color: #acacac;
+}
+
+.menu-categorie_cours_container .menu .menu-item:hover a {
+  color: #c2c2c2;
+}
+
+.menu-categorie_cours_container .menu .current-menu-item {
+  background-color: #1f1f1f;
+}
+
+.menu-categorie_cours_container .menu a {
+  color: #292929;
 }
 
 .site__footer {
@@ -729,15 +940,15 @@ COMPOSANTES
   align-items: center;
   padding: 3px;
   border-radius: 5px;
-  box-shadow: 0 8px 16px 0 rgba(255, 143, 195, 0.431), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 8px 16px 0 rgba(100, 100, 100, 0.431), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .footer__menu__nav__ul .menu-item a svg {
-  color: #7b5647;
+  color: #545454;
 }
 
 .footer__menu__nav__ul .menu-item a:hover svg {
-  color: #ff8585;
+  color: #949494;
 }
 
 .footer__titre,
@@ -760,13 +971,13 @@ COMPOSANTES
 .recherche__input {
   flex: 1;
   width: 100%;
-  background-color: rgba(255, 199, 229, 0.5);
+  background-color: rgba(185, 185, 185, 0.5);
   border: none;
   outline: none;
 }
 
 .recherche__input:focus {
-  background-color: rgba(255, 199, 229, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .recherche__bouton {
@@ -776,6 +987,10 @@ COMPOSANTES
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.evenement__resume {
+  background-color: #e01875;
 }
 
 /* ---------------------------------------------------------
@@ -865,19 +1080,27 @@ theme name: Lab 2 Lemieux Florence
   display: grid;
   gap: 0px;
   grid-template-columns: auto;
-  grid-template-areas: "sidebar" "header" "main" "footer";
+  grid-template-areas: "sidebar"
+ "header"
+ "main"
+ "footer";
 }
 
 @media screen and (min-width: 800px) {
   .site {
     grid-template-columns: 300px auto;
-    grid-template-areas: "header header" "sidebar main" "footer footer";
+    grid-template-areas: "header header"
+ "sidebar main"
+ "footer footer";
   }
   .home {
     display: grid;
     gap: 10px;
     grid-template-columns: auto;
-    grid-template-areas: "sidebar" "header" "main" "footer";
+    grid-template-areas: "sidebar"
+ "header"
+ "main"
+ "footer";
   }
 }
 /*# sourceMappingURL=style.css.map */

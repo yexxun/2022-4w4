@@ -42,6 +42,7 @@
     }
 }
 
+
 @media screen and (min-width : $largeur__media--tablette){
     .site #burger {
         display : none;
@@ -57,6 +58,26 @@
         display : none;
     }
 
+}
+
+.accueil__cours{
+    //background-color: rgb(255, 191, 191);
+    color: azure;
+}
+
+.accueil__aide{
+    //background-color: rgb(177, 177, 177);
+    color: azure;
+}
+
+.accueil__etudiant{
+   // background-color: rgb(177, 177, 177);
+    color: azure;
+}
+
+.accueil__prof{
+    //background-color: rgb(177, 177, 177);
+    color: azure;
 }
 
 

@@ -1,6 +1,6 @@
 /*
-theme name: TP1 yeeun Kim
-Author : yeeun Kim
+theme name: EXER-4 yeeun Kim
+Author: yeeun Kim
 Author URI: https://github.com/yexxun
 Description: Ce thème servira de base de développement pour l'ensemble du cours 4W4. Chacune des étapes de développement se retrouvera sur gitHub à l'adresse: https://github.com/eddytuto/2022-4w4
 Version: 1.0.0
@@ -26,6 +26,7 @@ INITIALISATION
 ÉLÉMENTS
 --------------------------------------------------------- */
 @import "elements/links";
+@import "elements/balise"; 
 
 /* ---------------------------------------------------------
 COMPOSANTES
@@ -33,9 +34,12 @@ COMPOSANTES
 @import "composantes/contenu";
 @import "composantes/header";
 @import "composantes/navigation";
+@import "composantes/navigation_accueil";
+@import "composantes/navigation_categorie_cours";
 @import "composantes/footer";
 @import "composantes/single_cours";
 @import "composantes/recherche";
+@import "composantes/evenement";
 
 /* ---------------------------------------------------------
 ANIMAION
@@ -46,3 +50,4 @@ ANIMAION
 LAYOUT
 --------------------------------------------------------- */
 @import "layout/layout";
+

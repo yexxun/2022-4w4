@@ -56,6 +56,7 @@
       padding: 15px;
       @media screen and (min-width : $largeur__media--tablette){
         margin-left: auto;
+        width: 350px;
       }
       &__lien{
         display: flex;
@@ -89,7 +90,7 @@
     outline: 0;
     border-radius: 5px;
     border: none;
-    background: hsl(0, 100%, 91%);
+    background: hsl(0, 0%, 13%);
     padding: 0 0 0 40px;
     margin: 0;
   }
