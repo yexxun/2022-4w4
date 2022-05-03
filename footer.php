@@ -42,9 +42,9 @@
 </footer>
 <div class="boite__modale">
      <button class="boite__modale__ferme">X</button>
-     <p class="boite__modale__texte">
-          Ceci est un premier test de boîte modale
-     </p>
+     <article class="boite__modale__texte">
+          <img>
+  </article>
 </div>
 <?php wp_footer(); ?>
 </body>

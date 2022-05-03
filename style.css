@@ -1084,7 +1084,7 @@ ANIMAION
   top: 0;
   left: 0;
   transition: all 0.5s ease-in-out;
-  background-color: #292929;
+  background-color: #979797;
 }
 
 .burger .burger__ligne:nth-of-type(1) {
