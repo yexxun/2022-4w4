@@ -1,0 +1,12 @@
+/*
+Galerie gutenberg de la page d'acceuil
+*/
+
+
+.galerie{
+    width: 100%;
+    @media screen and (min-width : $largeur__media--mobile) {
+      width: 75%;  
+    }
+    
+}

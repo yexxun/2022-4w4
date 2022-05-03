@@ -41,11 +41,14 @@ COMPOSANTES
 @import "composantes/recherche";
 @import "composantes/evenement";
 @import "composantes/boite-modale";
+@import "composantes/galerie";
+@import "composantes/accueil";
 
 /* ---------------------------------------------------------
 ANIMAION
 --------------------------------------------------------- */
 @import "animation/entete";
+@import "animation/burger";
 
 /* ---------------------------------------------------------
 LAYOUT
