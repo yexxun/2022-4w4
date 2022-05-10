@@ -1,18 +1,91 @@
-.boite__modale{
+.boite__modale, .boite__carrousel{
     position: fixed;
-    top: 25vh;
-    left: 25vw;
-    border: 5px solid rgba(170, 170, 170, 0);
-    background-color: rgba(255, 0, 0, 0);
-    width: 50vw;
-    height: 50vh;
+    top: 25%;
+    left: 25%;
+    border: 10px solid rgb(32, 32, 32);
+    background-color: rgb(112, 112, 112);
+    width: 50%;
+    height: 50%;
     transform: scale(0);
     transition: all 1s ease-in-out;
-    &__fermeture{}
+    &__ferme{
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 10px;
+        right: 10px;
+        z-index: 1;
+    }
     &__texte{}
 
-    &--ouvrir{
+
+    &__ouvrir{
     transform: scale(1);
 }
+
+
 }
 
+.boite__modale{
+    width: 95%;
+    height: 95%;
+    top: 2.5%;
+    left:2.5%;
+    @media screen and(min-width: $largeur__media--desktop){
+        width: 50%;
+        height: 50%;
+        top: 25%;
+        left: 25%;
+        
+        
+    }
+}
+
+.boite__carrousel{
+    top: 12.5%;
+    left: 12.5%;
+    width: 75%;
+    height: 75%;
+    
+    &__img{
+    position: absolute;
+    object-fit: cover;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    img{
+        position: absolute;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        //opacity: 0;
+        transform: translateX(-100%);
+        transition: all 1s ease-in-out;
+        &.img--ouvrir{
+            opacity: 1;
+            transform: translateX(0);
+        }
+      }
+    }
+    &__navigation{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        bottom: 0;
+        z-index: 1;
+        .button{
+            width: 20px;
+            height: 20px;
+            margin: 20px 10px;
+            border-radius: 100%;
+            &:focus{
+                background-color: black;
+            }
+        }
+    }
+}

@@ -1,27 +1,62 @@
 (function(){
-let boite__modale = document.querySelector(".boite__modale")
-let cours__desc__ouvrir = document.querySelectorAll('.cours__desc__ouvrir');
-let boite__modale__ferme = document.querySelector('.boite__modale__ferme');
-let boite__modale__texte = document.querySelector('.boite__modale__texte');
-
+    console.log('vive la carrousel')
+let boite__carrousel = document.querySelector(".boite__carrousel")
+let boite__carrousel__navigation = document.querySelector(".boite__carrousel__navigation")
+let boite__carrousel__ferme = document.querySelector('.boite__carrousel__ferme');
+let boite__carrousel__img = document.querySelector('.boite__carrousel__img');
 let galerie__img = document.querySelectorAll('.galerie img')
 console.log(galerie__img.length)
-/* Création d'un élément img */
+
+/* Création d'un élément Img */
 let elmImg = document.createElement('img')
-/* Dans l'article de la boîte modale on ajoute la boîte img */
-boite__modale__texte.appendChild(elmImg)
+/* Dans l'article de la boite modale on ajoute la boite img */
+boite__carrousel.append(elmImg)
+/* On parcour chacune es img de la galerie */
+let index = 0
+
 for(const img of galerie__img){
+   let elmImg = document.createElement('img')
+   elmImg.setAttribute('src', img.getAttribute('src'))
+   boite__carrousel__img.append(elmImg)
+
+   let bouton = document.createElement('input')
+   bouton.setAttribute('type','radio')
+   bouton.setAttribute('class','bouton')
+   bouton.setAttribute('name','bouton')
+   bouton.setAttribute('checked','')
    
+   
+   bouton.dataset.index = index
+   boite__carrousel__navigation.append(bouton)
+
+   bouton.addEventListener('change', function(e){
+       e.preventDefault
+       boite__carrousel__img.children[this.dataset.index].classList.remove('img--ouvrir')
+       boite__carrousel__img.children[this.dataset.index].classList.add('img--ouvrir')
+   })
+
+//    let dom_image = document.createElement('img')
+//    dom_image.setAttribute('src', img.src)
+//    boite__carrousel__img.append(dom_image)
+//     button.addEventListener('mousedown', function(){
+//        dom_image.setAttribute('src', galerie__img[this.dataset.index].getAttribute('src'))
+//     })
+
+
+ /* Ouvrir la boite__carrousel */
     img.addEventListener('mousedown', function(){
-        //console.log(this.parentNode.parentNode.className)
-        boite__modale.classList.add('boite__modale--ouvrir')
-        //console.log(boite__modale.classList)
-        console.log(this.getAttribute('src'))
-        elmImg.setAttribute('src', this.getAttribute('src'))
+        // //console.log(this.parentNode.parentNode.className)
+        console.log('selectionne ouvrir carrousel')
+         boite__carrousel.classList.add('boite__carrousel__ouvrir')
+        console.log(boite__carrousel.classList)
+        // console.log(this.getAttribute('src'))
+        // elmImg.setAttribute('src', this.getAttribute('src'))
+        boite__carrousel__img.children[0].classList.add('img--ouvrir')
     })
+    index++
 }
 
-boite__modale__ferme.addEventListener('mousedown', function(){
-    boite__modale.classList.remove('boite__modale--ouvrir')
+boite__carrousel__ferme.addEventListener('mousedown', function(){
+    boite__carrousel.classList.remove('boite__carrousel__ouvrir')
 })
 })()
