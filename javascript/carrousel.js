@@ -31,6 +31,7 @@ for(const img of galerie__img){
 
    bouton.addEventListener('change', function(e){
        e.preventDefault
+       initialiseRadioBouton();
        boite__carrousel__img.children[this.dataset.index].classList.remove('img--ouvrir')
        boite__carrousel__img.children[this.dataset.index].classList.add('img--ouvrir')
    })
@@ -59,4 +60,11 @@ for(const img of galerie__img){
 boite__carrousel__ferme.addEventListener('mousedown', function(){
     boite__carrousel.classList.remove('boite__carrousel__ouvrir')
 })
+function initialiseRadioBouton(){
+    for(let i = 0; i < boite__carrousel__navigation.children.length; i++){
+        if(boite__carrousel__navigation.children[i].checked == false){
+            boite__carrousel__img.children[i].classList.remove('img--ouvrir');
+        }
+    }
+}
 })()
