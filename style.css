@@ -644,6 +644,7 @@ COMPOSANTES
 
 .site__header__titre .custom-logo-link, .site__header__titre .header__titre, .site__header__titre .header__description {
   padding: 10px;
+  margin-left: 50px;
 }
 
 .site__header__titre .header__titre {
@@ -1160,8 +1161,8 @@ ANIMAION
 .burger {
   margin: 1.5rem 1.5rem;
   position: relative;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2rem;
+  height: 2rem;
   background-color: transparent;
   border-radius: 10%;
   overflow: hidden;
@@ -1174,7 +1175,7 @@ ANIMAION
   top: 0;
   left: 0;
   transition: all 0.5s ease-in-out;
-  background-color: #979797;
+  background-color: #2f2f2f;
 }
 
 .burger .burger__ligne:nth-of-type(1) {

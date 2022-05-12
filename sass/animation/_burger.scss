@@ -1,11 +1,13 @@
 .burger{
     margin: 1.5rem 1.5rem;
     position: relative;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2rem;
+    height: 2rem;
     background-color: transparent;
     border-radius: 10%;
     overflow: hidden;
+
+
     .burger__ligne{
         position: absolute;
         width: 100%;
@@ -13,7 +15,8 @@
         top: 0;
         left: 0;
         transition: all 0.5s ease-in-out;
-        background-color: rgb(151, 151, 151); //couleur des lignes du menu burger
+        background-color: rgb(47, 47, 47); //couleur des lignes du menu burger
+      
             &:nth-of-type(1){
                 clip-path: polygon(0 0, 100% 0, 100% 20%, 0 20%);
             }
@@ -23,7 +26,9 @@
             &:nth-of-type(3){
                 clip-path: polygon(0 80%, 100% 80%, 100% 100%, 0 100%);
             }
+         
         }
+        
         // &:hover{
         //     .burger__ligne:nth-of-type(1){
         //         clip-path: polygon(7.1% -7.1%, 107.1% 92.9%, 92.9% 107.1%, -7.1% 7.1%);
