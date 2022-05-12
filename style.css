@@ -544,6 +544,10 @@ COMPOSANTES
   padding: 10px;
 }
 
+.formation__cours:hover {
+  transform: scale(1.1);
+}
+
 @media screen and (min-width: 800px) {
   .formation__cours {
     width: 45%;
