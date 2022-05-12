@@ -1,5 +1,6 @@
 .menu-accueil-container, .menu-evenement-container{
 
+  
     .menu{ // ul
         display: flex;
         justify-content: space-around;
@@ -20,6 +21,8 @@
                 width: 20%;
                 padding: 10px;
                 height: 250px;
+                border: black;
+                border-radius: 5%;
                
             a{
                 display: flex;
@@ -45,7 +48,7 @@
                 }
             }
             &:hover{
-                
+                transform: scale(1.2);
                 a{
                     
                 }

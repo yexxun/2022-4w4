@@ -815,6 +815,8 @@ COMPOSANTES
   width: 20%;
   padding: 10px;
   height: 250px;
+  border: black;
+  border-radius: 5%;
 }
 
 .menu-accueil-container .menu .menu-item a, .menu-evenement-container .menu .menu-item a {
@@ -842,6 +844,10 @@ COMPOSANTES
   background-position: center center;
   background-size: cover;
   margin-top: auto;
+}
+
+.menu-accueil-container .menu .menu-item:hover, .menu-evenement-container .menu .menu-item:hover {
+  transform: scale(1.2);
 }
 
 .menu-accueil-container .menu-item {
