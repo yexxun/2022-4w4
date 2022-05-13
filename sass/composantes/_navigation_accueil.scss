@@ -38,7 +38,6 @@
                     font-size: 1rem;
                 }
                 .menu-item-icone{ //div
-                    border: 1px solid #aaa;
                     width: 3rem;
                     height: 3rem;
                     background-repeat: no-repeat;
@@ -60,15 +59,20 @@
 
 .menu-accueil-container {
     .menu-item {
-        background-color: $color__bouton__background;
+        //background-color: $color__bouton__background;
+        background-color: rgb(56, 56, 56);
+        
         a{
-            color : $color__bouton__color;
+            //color : $color__bouton__color;
+            color : rgb(199, 199, 199);
 
         }
     &:hover{
-        background-color: $color__bouton__background--hover;
+        //background-color: $color__bouton__background--hover;
+        background-color: rgb(53, 53, 53);
         a{
-            color : $color__bouton__color--hover;
+            //color : $color__bouton__color--hover;
+            color : rgb(238, 238, 238);
         }
     }    
     }

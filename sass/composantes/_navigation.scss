@@ -29,15 +29,18 @@
     padding :0;
 }
 .menu-item{
-    margin:0;
-    padding : 0;
+    margin:3px;
+    padding : 3px;
     a{
         display : block;
         text-decoration: none;
         padding : 4px;
+        border: 2px solid black;
+        border-radius: 0.5rem;
         background-color: $color__background-link;
         &:hover {
             background-color: $color__background-link-hover;
+            transform: scale(1.1);
         }
     }
 }
