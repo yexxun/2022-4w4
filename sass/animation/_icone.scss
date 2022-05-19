@@ -1,3 +1,47 @@
-.menu-item-icone{
-    animation: anim-icone 1s ease-in-out;
+.accueil__htmlcss:hover{
+    .menu-item-icone{
+        
+  
+      animation: anim-icone .5s ease-in-out forwards;
+  
+    }
+}
+
+.accueil__css:hover{
+    .menu-item-icone{
+        
+  
+      animation: anim-icone .5s ease-in-out forwards;
+  
+    }
+}
+.accueil__react:hover{
+    .menu-item-icone{
+        
+  
+      animation: anim-icone .5s ease-in-out forwards;
+  
+    }
+}
+.accueil__git:hover{
+    .menu-item-icone{
+        
+  
+      animation: anim-icone .5s ease-in-out forwards;
+  
+    }
+}
+
+
+@keyframes anim-icone {
+    0%{
+        transform:translateY(0);
+      
+        
+    }
+   
+    100%{
+        transform:translateY(-70%) scale(1.2);
+        
+    }
 }
