@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*
-theme name: TP2 yeeun Kim
+theme name: EXER-4 yeeun Kim
 Author: yeeun Kim
 Author URI: https://github.com/yexxun
 Description: Ce thème servira de base de développement pour l'ensemble du cours 4W4. Chacune des étapes de développement se retrouvera sur gitHub à l'adresse: https://github.com/eddytuto/2022-4w4
@@ -23,6 +23,7 @@ VARIABLES
 /* ---------------- couleur bouton menu-categorie cours */
 /* -------------------------couleur titre */
 /* ------------------------- carte d'acceuil */
+/* ------------------------- carte de menu atelier */
 /* ------------------------------------- points de rupture des media queries */
 /* ---------------------------------------------------------
 INITIALISATION
@@ -794,28 +795,45 @@ COMPOSANTES
   color: azure;
 }
 
-.menu-accueil-container .menu, .menu-evenement-container .menu {
+.menu-accueil-container .menu, .menu-evenement-container .menu, .menu-atelier-container .menu {
   display: flex;
   justify-content: space-around;
+  /* icone pour le menu atelir*/
 }
 
-.menu-accueil-container .menu .accueil__cours .menu-item-icone, .menu-evenement-container .menu .accueil__cours .menu-item-icone {
+.menu-accueil-container .menu .accueil__cours .menu-item-icone, .menu-evenement-container .menu .accueil__cours .menu-item-icone, .menu-atelier-container .menu .accueil__cours .menu-item-icone {
   background-image: url("https://s2.svgbox.net/octicons.svg?ic=repo-forked-bold");
 }
 
-.menu-accueil-container .menu .accueil__prof .menu-item-icone, .menu-evenement-container .menu .accueil__prof .menu-item-icone {
+.menu-accueil-container .menu .accueil__prof .menu-item-icone, .menu-evenement-container .menu .accueil__prof .menu-item-icone, .menu-atelier-container .menu .accueil__prof .menu-item-icone {
   background-image: url("https://s2.svgbox.net/octicons.svg?ic=person-bold");
 }
 
-.menu-accueil-container .menu .accueil__aide .menu-item-icone, .menu-evenement-container .menu .accueil__aide .menu-item-icone {
+.menu-accueil-container .menu .accueil__aide .menu-item-icone, .menu-evenement-container .menu .accueil__aide .menu-item-icone, .menu-atelier-container .menu .accueil__aide .menu-item-icone {
   background-image: url("https://s2.svgbox.net/octicons.svg?ic=repo-bold");
 }
 
-.menu-accueil-container .menu .accueil__etudiant .menu-item-icone, .menu-evenement-container .menu .accueil__etudiant .menu-item-icone {
+.menu-accueil-container .menu .accueil__etudiant .menu-item-icone, .menu-evenement-container .menu .accueil__etudiant .menu-item-icone, .menu-atelier-container .menu .accueil__etudiant .menu-item-icone {
   background-image: url("https://s2.svgbox.net/octicons.svg?ic=rocket-bold");
 }
 
-.menu-accueil-container .menu .menu-item, .menu-evenement-container .menu .menu-item {
+.menu-accueil-container .menu .accueil__htmlcss .menu-item-icone, .menu-evenement-container .menu .accueil__htmlcss .menu-item-icone, .menu-atelier-container .menu .accueil__htmlcss .menu-item-icone {
+  background-image: url("https://s2.svgbox.net/files.svg?ic=css");
+}
+
+.menu-accueil-container .menu .accueil__css .menu-item-icone, .menu-evenement-container .menu .accueil__css .menu-item-icone, .menu-atelier-container .menu .accueil__css .menu-item-icone {
+  background-image: url("https://s2.svgbox.net/files.svg?ic=reactjs");
+}
+
+.menu-accueil-container .menu .accueil__react .menu-item-icone, .menu-evenement-container .menu .accueil__react .menu-item-icone, .menu-atelier-container .menu .accueil__react .menu-item-icone {
+  background-image: url("https://s2.svgbox.net/files.svg?ic=html");
+}
+
+.menu-accueil-container .menu .accueil__git .menu-item-icone, .menu-evenement-container .menu .accueil__git .menu-item-icone, .menu-atelier-container .menu .accueil__git .menu-item-icone {
+  background-image: url("https://s2.svgbox.net/files.svg?ic=git");
+}
+
+.menu-accueil-container .menu .menu-item, .menu-evenement-container .menu .menu-item, .menu-atelier-container .menu .menu-item {
   width: 20%;
   padding: 10px;
   height: 250px;
@@ -823,7 +841,7 @@ COMPOSANTES
   border-radius: 5%;
 }
 
-.menu-accueil-container .menu .menu-item a, .menu-evenement-container .menu .menu-item a {
+.menu-accueil-container .menu .menu-item a, .menu-evenement-container .menu .menu-item a, .menu-atelier-container .menu .menu-item a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -832,15 +850,15 @@ COMPOSANTES
   height: 100%;
 }
 
-.menu-accueil-container .menu .menu-item a hr, .menu-evenement-container .menu .menu-item a hr {
+.menu-accueil-container .menu .menu-item a hr, .menu-evenement-container .menu .menu-item a hr, .menu-atelier-container .menu .menu-item a hr {
   width: 90%;
 }
 
-.menu-accueil-container .menu .menu-item a .menu-item-description, .menu-evenement-container .menu .menu-item a .menu-item-description {
+.menu-accueil-container .menu .menu-item a .menu-item-description, .menu-evenement-container .menu .menu-item a .menu-item-description, .menu-atelier-container .menu .menu-item a .menu-item-description {
   font-size: 1rem;
 }
 
-.menu-accueil-container .menu .menu-item a .menu-item-icone, .menu-evenement-container .menu .menu-item a .menu-item-icone {
+.menu-accueil-container .menu .menu-item a .menu-item-icone, .menu-evenement-container .menu .menu-item a .menu-item-icone, .menu-atelier-container .menu .menu-item a .menu-item-icone {
   width: 3rem;
   height: 3rem;
   background-repeat: no-repeat;
@@ -849,7 +867,7 @@ COMPOSANTES
   margin-top: auto;
 }
 
-.menu-accueil-container .menu .menu-item:hover, .menu-evenement-container .menu .menu-item:hover {
+.menu-accueil-container .menu .menu-item:hover, .menu-evenement-container .menu .menu-item:hover, .menu-atelier-container .menu .menu-item:hover {
   transform: scale(1.2);
 }
 
@@ -883,6 +901,22 @@ COMPOSANTES
 
 .menu-evenement-container .menu-item:hover a {
   background-color: #27275f;
+}
+
+.menu-atelier-container .menu-item {
+  background-color: #575792;
+}
+
+.menu-atelier-container .menu-item a {
+  background-color: #9292fb;
+}
+
+.menu-atelier-container .menu-item:hover {
+  background-color: #5a5a7c;
+}
+
+.menu-atelier-container .menu-item:hover a {
+  background-color: #5555b8;
 }
 
 .menu-categorie_cours_container .menu {
@@ -1264,27 +1298,19 @@ theme name: Lab 2 Lemieux Florence
   display: grid;
   gap: 0px;
   grid-template-columns: auto;
-  grid-template-areas: "sidebar"
- "header"
- "main"
- "footer";
+  grid-template-areas: "sidebar" "header" "main" "footer";
 }
 
 @media screen and (min-width: 800px) {
   .site {
     grid-template-columns: 300px auto;
-    grid-template-areas: "header header"
- "sidebar main"
- "footer footer";
+    grid-template-areas: "header header" "sidebar main" "footer footer";
   }
   .home {
     display: grid;
     gap: 10px;
     grid-template-columns: auto;
-    grid-template-areas: "sidebar"
- "header"
- "main"
- "footer";
+    grid-template-areas: "sidebar" "header" "main" "footer";
   }
 }
 /*# sourceMappingURL=style.css.map */

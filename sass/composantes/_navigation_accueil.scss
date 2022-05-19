@@ -1,4 +1,4 @@
-.menu-accueil-container, .menu-evenement-container{
+.menu-accueil-container, .menu-evenement-container,.menu-atelier-container {
 
   
     .menu{ // ul
@@ -15,6 +15,19 @@
         }
         .accueil__etudiant .menu-item-icone{
             background-image: url("https://s2.svgbox.net/octicons.svg?ic=rocket-bold");
+        }
+/* icone pour le menu atelir*/
+        .accueil__htmlcss .menu-item-icone{
+            background-image: url("https://s2.svgbox.net/files.svg?ic=css");
+        }
+        .accueil__css .menu-item-icone{
+            background-image: url("https://s2.svgbox.net/files.svg?ic=reactjs");
+        }
+        .accueil__react .menu-item-icone{
+            background-image: url("https://s2.svgbox.net/files.svg?ic=html");
+        }
+        .accueil__git .menu-item-icone{
+            background-image: url("https://s2.svgbox.net/files.svg?ic=git");
         }
         .menu-item{ // li
            // background-color: red  !important;
@@ -89,6 +102,23 @@
             background-color: $couleur__carte__evenement__background--hover;
             a{
                 background-color: $couleur__carte__evenement--hover;
+            }
+        }
+    }
+    
+}
+
+.menu-atelier-container{
+
+    .menu-item{
+        background-color: $couleur__carte__atelier__background;
+        a{
+            background-color: $couleur__carte__atelier;
+        }
+        &:hover{
+            background-color: $couleur__carte__atelier__background--hover;
+            a{
+                background-color: $couleur__carte__atelier--hover;
             }
         }
     }
